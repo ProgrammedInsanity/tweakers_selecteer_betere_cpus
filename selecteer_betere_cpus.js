@@ -161,7 +161,6 @@ function loadButtons() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 13vh;
     }
 
     .SelecteerBetereCpusButton {
