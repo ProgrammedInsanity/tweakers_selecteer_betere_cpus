@@ -13,8 +13,6 @@ const cpu_data = JSON.parse(pako.inflate(atob(cpu_data_base64_and_compressed), {
 
 
 function searchForCpuSoc() {
-    const title = 'title="Cpu/soc"'
-
     const h4Elements = document.querySelectorAll('h4[title="Cpu/soc"]');
     
     return h4Elements[0].parentNode.parentNode;
@@ -27,13 +25,15 @@ function getSelectedCpus() {
 
     const options = parentToOptions.querySelector('div.options');
 
-    const twoOptionsContainerul = options.querySelectorAll('ul');
+
+
+    const cpuLists = options.querySelectorAll('ul');
 
     let cpuNames = [];
 
 
-    for (let i = 0; i < twoOptionsContainerul.length; i++) {
-        const ul = twoOptionsContainerul[i];
+    for (let i = 0; i < cpuLists.length; i++) {
+        const ul = cpuLists[i];
         const listItems = ul.querySelectorAll('li');
 
         listItems.forEach(li => {
@@ -89,10 +89,10 @@ function selectCpusWithHigherRank() {
 
     const options = parentToOptions.querySelector('div.options');
 
-    const twoOptionsContainerul = options.querySelectorAll('ul');
+    const cpuLists = options.querySelectorAll('ul');
 
-    for (let i = 0; i < twoOptionsContainerul.length; i++) {
-        const ul = twoOptionsContainerul[i];
+    for (let i = 0; i < cpuLists.length; i++) {
+        const ul = cpuLists[i];
         const listItems = ul.querySelectorAll('li');
 
         listItems.forEach(li => {
@@ -116,10 +116,10 @@ function unselectAllCpus() {
 
     const options = parentToOptions.querySelector('div.options');
 
-    const twoOptionsContainerul = options.querySelectorAll('ul');
+    const cpuLists = options.querySelectorAll('ul');
 
-    for (let i = 0; i < twoOptionsContainerul.length; i++) {
-        const ul = twoOptionsContainerul[i];
+    for (let i = 0; i < cpuLists.length; i++) {
+        const ul = cpuLists[i];
         const listItems = ul.querySelectorAll('li');
 
         listItems.forEach(li => {
