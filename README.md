@@ -8,15 +8,25 @@ CPU-ranggegevens zijn afkomstig van (https://www.cpubenchmark.net/cpu_list.php).
 Hoe het werkt
 Het script decodeert en decomprimeert eerst een base64-string om CPU-gegevens te krijgen. Vervolgens biedt het verschillende functies om met de webpagina te interageren:
 
+
 searchForCpuSoc(): Zoekt naar de CPU/SOC-sectie op de webpagina.
+
 getSelectedCpus(): Haalt de namen van de momenteel geselecteerde CPU's op.
-getCpusWithHigherRank(): Haalt de namen van CPU's op die een hogere rang hebben dan de momenteel geselecteerde CPU's.
+
+getCpusWithHigherRank(): Haalt de namen van CPU's op die een hogere rang hebben dan de momenteel geselecteerde CPU's
+.
 selectCpusWithHigherRank(): Selecteert de CPU's die een hogere rang hebben dan de momenteel geselecteerde CPU's.
+
 unselectAllCpus(): Deselecteert alle CPU's.
+
 addInputButtonToCpusoc(text, onclick): Voegt een knop toe met de opgegeven tekst en onclick-functie aan de CPU/SOC-sectie.
+
 addStyles(css): Voegt de opgegeven CSS toe aan de webpagina.
+
 loadButtons(): Voegt de knoppen 'Selecteer CPU's met een hogere rang' en 'Deselecteer alles' toe aan de CPU/SOC-sectie.
+
 Wanneer de webpagina wordt geladen, wordt de functie loadButtons() aangeroepen om de knoppen aan de pagina toe te voegen.
+
 
 Hoe te gebruiken
 Installeer een UserScript-manager in uw browser, zoals Tampermonkey of Greasemonkey.
