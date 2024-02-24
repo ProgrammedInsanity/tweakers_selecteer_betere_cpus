@@ -11,26 +11,6 @@ const cpu_data_base64_and_compressed  = "H4sIALro2WUC/6S9W3NcR3I1+lc65ulz2LTqlnU
 const cpu_data = JSON.parse(pako.inflate(atob(cpu_data_base64_and_compressed), { to: 'string' }));// [{'cpu_name':cpu_name,'cpu_mark':cpu_mark,'rank':rank}]
 
 
-function extractTextFromLi(xpathToUl) {
-    let resultList = [];
-    
-    // Evaluate the XPath and iterate over matched nodes
-    const iterator = document.evaluate(xpathToUl, document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
-    let node = iterator.iterateNext();
-    
-    while (node) {
-      // For each 'li' node, find the span with class 'facetLabel' and get its text content
-      let labels = node.querySelectorAll('span.facetLabel');
-      labels.forEach(label => {
-        resultList.push(label.textContent.trim());
-      });
-      
-      node = iterator.iterateNext();
-    }
-    
-    return resultList;
-} 
-
 
 function searchForCpuSoc() {
     const title = 'title="Cpu/soc"'
